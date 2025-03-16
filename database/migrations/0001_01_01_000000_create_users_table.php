@@ -19,9 +19,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone')->nullable();
-            $table->string('category')->nullable();
-            $table->string('institution')->nullable();
-            $table->string('city')->nullable();
             $table->string('birth_place')->nullable(); // Tempat Lahir
             $table->date('birth_date')->nullable(); // Tanggal Lahir
             $table->string('gender')->nullable(); // Jenis Kelamin

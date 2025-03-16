@@ -240,11 +240,11 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="contribution_location" class="form-label">Dimana rencana kontribusimu? (Medan/Deli
-                  Serdang)</label>
-                <input type="text" class="form-control @error('contribution_location') is-invalid @enderror"
-                  id="contribution_location" name="contribution_location" placeholder="Contoh: Deli Serdang"
-                  value="{{ old('contribution_location') }}" />
+                <label for="contribution_location" class="form-label">Dimana rencana kontribusimu?</label>
+                <select class="form-control @error('contribution_location') is-invalid @enderror" id="contribution_location" name="contribution_location" required>
+                  <option value="Medan" {{ old('contribution_location') == 'Medan' ? 'selected' : '' }}>Medan</option>
+                  <option value="Deli Serdang" {{ old('contribution_location') == 'Deli Serdang' ? 'selected' : '' }}>Deli Serdang</option>
+                </select>
                 @error('contribution_location')
                   <div class="invalid-feedback">{{ $message }}</div>
                 @enderror

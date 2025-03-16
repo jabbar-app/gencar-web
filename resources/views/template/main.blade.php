@@ -228,66 +228,16 @@
     <div class="mobile-menu-main">
       <nav class="nav-main mainmenu-nav mt--30">
         <ul class="mainmenu metismenu" id="mobile-menu-active">
-          <li class="has-droupdown">
-            <a href="#" class="main">Home</a>
-            <ul class="submenu mm-collapse">
-              <li><a class="mobile-menu-link" href="index.html">SEO Marketing</a></li>
-              <li><a class="mobile-menu-link" href="index-two.html">Digital Marketing</a></li>
-              <li><a class="mobile-menu-link" href="index-three.html">Digital Agency</a></li>
-              <li><a class="mobile-menu-link" href="index-four.html">Startup Agency</a></li>
-              <li><a class="mobile-menu-link" href="index-five.html">Advertising Agency</a></li>
-              <li><a class="mobile-menu-link" href="index-six.html">Web Design Agency</a></li>
-              <li><a class="mobile-menu-link" href="index-seven.html">Social Media Agency</a></li>
-              <li><a class="mobile-menu-link" href="index-eight.html">SEO Agency</a></li>
-            </ul>
-          </li>
-          <li class="has-droupdown">
-            <a href="#" class="main">Pages</a>
-            <ul class="submenu mm-collapse">
-              <li><a class="mobile-menu-link" href="about.html">About</a></li>
-              <li><a class="mobile-menu-link" href="team.html">Our Team</a></li>
-              <li><a class="mobile-menu-link" href="faq.html">FAQ's</a></li>
-              <li><a class="mobile-menu-link" href="book-a-demo.html">Book a Demo</a></li>
-              <li><a class="mobile-menu-link" href="free-audit.html">Free Audit</a></li>
-              <li><a class="mobile-menu-link" href="pricing.html">Pricing Plans</a></li>
-              <li><a class="mobile-menu-link" href="404.html">404 Page</a></li>
-            </ul>
-          </li>
-          <li class="has-droupdown">
-            <a href="#" class="main">Services</a>
-            <ul class="submenu mm-collapse">
-              <li><a class="mobile-menu-link" href="service.html">Services</a></li>
-              <li class="has-droupdown third-lvl">
-                <a class="main" href="#">Service Details</a>
-                <ul class="submenu-third-lvl mm-collapse">
-                  <li><a href="service-details.html"></a>Paid Search Marketing</li>
-                  <li><a href="email-marketing.html"></a>Email Marketing</li>
-                  <li><a href="social-media-marketing.html"></a>Social Media Marketing</li>
-                  <li><a href="influencer-marketing.html"></a>Influencer Marketing</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="has-droupdown">
-            <a href="#" class="main">Work</a>
-            <ul class="submenu mm-collapse">
-              <li><a class="mobile-menu-link" href="case-studies.html">Case Studies</a></li>
-              <li><a class="mobile-menu-link" href="single-case-studies.html">Case Studies Details</a></li>
-            </ul>
-          </li>
-          <li class="has-droupdown">
-            <a href="#" class="main">Blog</a>
-            <ul class="submenu mm-collapse">
-              <li><a class="mobile-menu-link" href="blog.html">Blog</a></li>
-              <li><a class="mobile-menu-link" href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-              <li><a class="mobile-menu-link" href="blog-grid.html">Blog Grid</a></li>
-              <li><a class="mobile-menu-link" href="blog-grid-2.html">Blog Grid Right Sidebar</a></li>
-              <li><a class="mobile-menu-link" href="blog-grid-3.html">Blog Grid Left Sidebar</a></li>
-              <li><a class="mobile-menu-link" href="blog-details.html">Blog Details</a></li>
-            </ul>
-          </li>
           <li>
-            <a href="contact.html" class="main">Contact Us</a>
+            <a href="/" class="main">Home</a>
+          </li>
+          <li class="has-droupdown">
+            <a href="#" class="main">Divisi</a>
+            <ul class="submenu mm-collapse">
+              <li><a class="mobile-menu-link" href="#literasi">Literasi</a></li>
+              <li><a class="mobile-menu-link" href="#rumbel">Rumah Belajar (Rumbel)</a></li>
+              <li><a class="mobile-menu-link" href="#cakrawala">Program Cakrawala</a></li>
+            </ul>
           </li>
         </ul>
       </nav>

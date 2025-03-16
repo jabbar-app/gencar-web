@@ -11,8 +11,7 @@
               Generasi <br> <span>Cakrawala 8</span>
             </h1>
             <p class="disc">
-              Struggling to find PPC experts who really understand your business our world-class marketers would love to
-              help.
+              Inkubator untuk membentuk karakter dan kepemimpinan bagi para pemuda/i Sumatera Utara. Sekarang sudah memasuki generasi ke-8.
             </p>
             <a href="{{ route('register') }}" class="rts-btn btn-primary-5 arrow-rotate">Daftar Sekarang <i
                 class="fa-light fa-arrow-right"></i></a>
@@ -73,7 +72,7 @@
                       style="height: 100px; margin-top: -20px;"></a>
                 </div>
               </div>
-              <div class="swiper-slide">
+              {{-- <div class="swiper-slide">
                 <div class="brand-inner">
                   <a href="#"><img src="{{ asset('assets/images/logo-gencar-ijo.png') }}" alt="brand"
                       style="height: 60px;"></a>
@@ -84,7 +83,7 @@
                   <a href="#"><img src="{{ asset('assets/images/arsenal.png') }}" alt="brand"
                       style="height: 60px;"></a>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
 
@@ -383,7 +382,8 @@
             <h2 class="title skew-up">Ayo bergabung dan bertumbuh bersama di <br> Generasi Cakrawala 8</h2>
             <p class="disc">Program Pelatihan dan Kepemimpinan Terbaik dari FIM Medan & FIM Deli Serdang.</p>
             <div class="button-area">
-              <a href="{{ route('register') }}" class="rts-btn btn-secondary-5"><i class="fa-light fa-paper-plane"></i>Daftar Sekarang</a>
+              <a href="{{ route('register') }}" class="rts-btn btn-secondary-5"><i
+                  class="fa-light fa-paper-plane"></i>Daftar Sekarang</a>
               <a href="https://wa.me/6282267103015" target="_blank" class="rts-btn btn-secondary-5-1">Tanya Admin</a>
             </div>
             <div class="shape-image">
