@@ -5,22 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="description" content="Your Ultimate Solution for Seo & Marketing">
-  <meta name="keywords" content="Hosting, Domain, Transfer, Buy Domain, Marketing">
+  <meta name="description" content="Generasi Cakrawala by FIM Medan & FIM Deli Serdang.">
+  <meta name="keywords" content="Gencar, Generasi Cakrawala, FIM Medan, FIM Deli Serdang">
   <link rel="canonical" href="https://html.themewant.com/fluxi/">
   <meta name="robots" content="index, follow">
   <!-- for open graph social media -->
-  <meta property="og:title" content="Fluxi SEO Marketing Website Template">
-  <meta property="og:description" content="Your Ultimate Solution for Seo & Marketing">
-  <meta property="og:image" content="https://www.example.com/image.jpg">
+  <meta property="og:title" content="Generasi Cakrawala">
+  <meta property="og:description" content="Generasi Cakrawala by FIM Medan & FIM Deli Serdang.">
+  <meta property="og:image" content="{{ asset('assets/img/logo_circle.png') }}">
   <meta property="og:url" content="https://html.themewant.com/fluxi/">
   <!-- for twitter sharing -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fluxi SEO Marketing Website Template">
-  <meta name="twitter:description" content="Your Ultimate Solution for Seo & Marketing">
+  <meta name="twitter:title" content="Generasi Cakrawala">
+  <meta name="twitter:description" content="Generasi Cakrawala by FIM Medan & FIM Deli Serdang.">
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/logo_circle.png') }}">
-  <title>Fluxi SEO Marketing Website Template</title>
+  <title>Generasi Cakrawala</title>
   <!-- swiper css -->
   <link rel="stylesheet preload" href="{{ asset('assets/css/plugins/swiper.min.css') }}" as="style">
   <!-- magnific popup css -->
@@ -57,6 +57,7 @@
                   <ul class="fluxi-submenu list-unstyled menu-home">
                     <li class="nav-item"><a class="nav-link page" href="#literasi">Literasi</a></li>
                     <li class="nav-item"><a class="nav-link page" href="#rumbel">Rumah Belajar (Rumbel)</a></li>
+                    <li class="nav-item"><a class="nav-link page" href="#cakrawala">Program Cakrawala</a></li>
                   </ul>
                   <!-- End Dropdown Menu -->
                 </li>

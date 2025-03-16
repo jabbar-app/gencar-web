@@ -150,13 +150,13 @@
                         <div class="icon">
                           <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="service" style="height: 24px;">
                         </div>
-                        <a href="service-single.html">
+                        <a href="#">
                           <h6 class="title">Profil</h6>
                         </a>
                         <p class="disc">
                           Pemuda/i berusia 17 s/d 25 tahun dan berdomisili di Sumatera Utara.
                         </p>
-                        <a href="service-single.html" class="btn-border-bottom">Learn more <i
+                        <a href="#" class="btn-border-bottom">Learn more <i
                             class="fa-sharp fa-light fa-arrow-right"></i></a>
                       </div>
                       <!-- ingle service area end -->
@@ -167,14 +167,14 @@
                         <div class="icon">
                           <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="service" style="height: 24px;">
                         </div>
-                        <a href="service-single.html">
+                        <a href="#">
                           <h6 class="title">Komitmen</h6>
                         </a>
                         <p class="disc">
                           Berkomitmen tinggi untuk mengikuti pelatihan dan siap berkontribusi minimal selama setahun
                           setelah pelatihan dilaksanakan.
                         </p>
-                        <a href="service-single.html" class="btn-border-bottom">Learn more <i
+                        <a href="#" class="btn-border-bottom">Learn more <i
                             class="fa-sharp fa-light fa-arrow-right"></i></a>
                       </div>
                       <!-- ingle service area end -->
@@ -185,13 +185,13 @@
                         <div class="icon">
                           <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="service" style="height: 24px;">
                         </div>
-                        <a href="service-single.html">
+                        <a href="#">
                           <h6 class="title">Kontribusi</h6>
                         </a>
                         <p class="disc">
                           Memiliki minat belajar yang tinggi dan tertarik di bidang pengabdian dan kegiatan sosial.
                         </p>
-                        <a href="service-single.html" class="btn-border-bottom">Learn more <i
+                        <a href="#" class="btn-border-bottom">Learn more <i
                             class="fa-sharp fa-light fa-arrow-right"></i></a>
                       </div>
                       <!-- ingle service area end -->
@@ -539,7 +539,7 @@
             </div>
           </div>
           <div class="bottom-btn text-center">
-            <a href="service.html" class="rts-btn btn-primary-4-border arrow-rotate">Lihat semua kegiatan <i
+            <a href="#" class="rts-btn btn-primary-4-border arrow-rotate">Lihat semua kegiatan <i
                 class="fa-light fa-arrow-right"></i></a>
           </div>
         </div>
@@ -659,7 +659,7 @@
     <div class="container-2">
       <div class="section-inner">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-7 order-2 order-md-0">
+          <div class="col-12 order-2 order-md-0">
             <div class="left-side-content">
               <h3 class="title">Nilai dan Prinsip Generasi Cakrawala</h3>
               <p class="desc">Generasi Cakrawala mengadopsi 7 Pilar Kepemimpinan dan 7 Pilar Karakter dari Forum
@@ -834,7 +834,7 @@
         </div>
 
         <div class="col-lg-12  text-center">
-          <a href="blog.html" class="rts-btn btn-primary-4-border arrow-rotate">Lihat selengkapnya <i
+          <a href="#" class="rts-btn btn-primary-4-border arrow-rotate">Lihat selengkapnya <i
               class="fa-light fa-arrow-right"></i></a>
         </div>
       </div>
