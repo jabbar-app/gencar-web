@@ -11,7 +11,8 @@
               Generasi <br> <span>Cakrawala 8</span>
             </h1>
             <p class="disc">
-              Inkubator untuk membentuk karakter dan kepemimpinan bagi para pemuda/i Sumatera Utara. Sekarang sudah memasuki generasi ke-8.
+              Inkubator untuk membentuk karakter dan kepemimpinan bagi para pemuda/i Sumatera Utara. Sekarang sudah
+              memasuki generasi ke-8.
             </p>
             <a href="{{ route('register') }}" class="rts-btn btn-primary-5 arrow-rotate">Daftar Sekarang <i
                 class="fa-light fa-arrow-right"></i></a>
@@ -560,96 +561,97 @@
           </div>
         </div>
       </div>
-      {{-- <div class="row g-48 mt--10">
+      <div class="row g-48 mt--10">
+        <div class="col-lg-3 col-md-4 col-sm-6"></div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/01.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-dita.jpg') }}" alt="team">
             </div>
-            <h6 class="title">Kevin Smith</h6>
-            <span class="designation">Founder & CEO</span>
+            <h6 class="title">Dita Aulia Putri, S.Pd <br>
+              <small class="text-muted">Gencar 5</small>
+            </h6>
+            <span class="designation">Awardee Beasiswa PPG Calon Guru 2024</span>
           </div>
-          <!-- single teama area end -->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
-          <div class="single-team-area-7">
-            <a href="#" class="thumbnail">
-              <img src="assets/images/team/02.png" alt="team">
-            </a>
-            <h6 class="title">David Daily</h6>
-            <span class="designation">Head of Production</span>
-          </div>
-          <!-- single teama area end -->
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/03.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
             </div>
-            <h6 class="title">Taylor Johnson</h6>
-            <span class="designation">Head of Marketing</span>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
           </div>
-          <!-- single teama area end -->
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
+        {{-- <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/04.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
             </div>
-            <h6 class="title">Kevin Smith</h6>
-            <span class="designation">Founder & CEO</span>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
           </div>
-          <!-- single teama area end -->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/05.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
             </div>
-            <h6 class="title">Sarah Smith</h6>
-            <span class="designation">Project Manager</span>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
           </div>
-          <!-- single teama area end -->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/06.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
             </div>
-            <h6 class="title">Rick James</h6>
-            <span class="designation">Creative Director</span>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
           </div>
-          <!-- single teama area end -->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/07.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
             </div>
-            <h6 class="title">Allen Chang</h6>
-            <span class="designation">Development Lead</span>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
           </div>
-          <!-- single teama area end -->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-          <!-- single teama area start -->
           <div class="single-team-area-7">
             <div class="thumbnail">
-              <img src="assets/images/team/08.png" alt="team">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
             </div>
-            <h6 class="title">David Larsson</h6>
-            <span class="designation">Fun Atmosphere</span>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
           </div>
-          <!-- single teama area end -->
         </div>
-      </div> --}}
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="single-team-area-7">
+            <div class="thumbnail">
+              <img src="{{ asset('assets/images/avatar-1.jpg') }}" alt="team">
+            </div>
+            <h6 class="title">Nur Fadillah <br>
+              <small class="text-muted">Gencar 7 - FIM 26</small>
+            </h6>
+            <span class="designation">Awardee beasiswa Etos ID, Ketua Umum UKMI Al 'Ilmi FIB USU</span>
+          </div>
+        </div> --}}
+      </div>
     </div>
   </div>
   <!-- expart team area end -->
@@ -729,19 +731,28 @@
       </div>
       <div class="row g-48 mt--0 justify-content-sm-center">
         <div class="col-lg-4 col-md-6 col-sm-10">
-          <img src="{{ asset('assets/images/gencar-7.webp') }}" alt="" class="single-testimonials-area p-0">
+          <img src="{{ asset('assets/images/img-1.JPG') }}" alt="" class="single-testimonials-area p-0">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
-          <img src="{{ asset('assets/images/gencar-7.webp') }}" alt="" class="single-testimonials-area p-0">
+          <img src="{{ asset('assets/images/img-2.jpg') }}" alt="" class="single-testimonials-area p-0">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
-          <img src="{{ asset('assets/images/gencar-7.webp') }}" alt="" class="single-testimonials-area p-0">
+          <img src="{{ asset('assets/images/img-3.JPG') }}" alt="" class="single-testimonials-area p-0">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
-          <img src="{{ asset('assets/images/gencar-7.webp') }}" alt="" class="single-testimonials-area p-0">
+          <img src="{{ asset('assets/images/img-4.JPG') }}" alt="" class="single-testimonials-area p-0">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
-          <img src="{{ asset('assets/images/gencar-7.webp') }}" alt="" class="single-testimonials-area p-0">
+          <img src="{{ asset('assets/images/img-5.png') }}" alt="" class="single-testimonials-area p-0">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10">
+          <img src="{{ asset('assets/images/img-6.JPG') }}" alt="" class="single-testimonials-area p-0">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10">
+          <img src="{{ asset('assets/images/img-7.JPG') }}" alt="" class="single-testimonials-area p-0">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10">
+          <img src="{{ asset('assets/images/img-8.JPG') }}" alt="" class="single-testimonials-area p-0">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10">
           <img src="{{ asset('assets/images/gencar-7.webp') }}" alt="" class="single-testimonials-area p-0">

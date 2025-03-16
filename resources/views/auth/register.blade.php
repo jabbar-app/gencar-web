@@ -39,7 +39,7 @@
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-                  name="password" placeholder="Masukkan password anda" required />
+                  name="password" placeholder="Buat password baru" required />
                 @error('password')
                   <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -221,8 +221,18 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <label for="contribution_plan" class="form-label">Rencana program kontribusi yang akan kamu
-                  laksanakan</label>
+                <label for="contribution_plan" class="form-label">
+                  Rencana program kontribusi yang akan kamu laksanakan <br>
+                  <small>
+                    <em>
+                      (Bisa diceritakan mulai dari apa nama programnya, siapa penerima manfaatnya, siapa saja yang
+                      terlibat,
+                      indikator keberhasilan, jangka waktu pelaksanaan, bentuk konkrit kegiatannya, semakin jelas semakin
+                      baik
+                      ya)
+                    </em>
+                  </small>
+                </label>
                 <textarea rows="3" class="form-control @error('contribution_plan') is-invalid @enderror"
                   id="contribution_plan" name="contribution_plan"
                   placeholder="Contoh: Program edukasi literasi digital untuk anak-anak di daerah pinggiran Medan" required>{{ old('contribution_plan') }}</textarea>
@@ -241,24 +251,17 @@
               </div>
               <div class="mb-3">
                 <label for="contribution_location" class="form-label">Dimana rencana kontribusimu?</label>
-                <select class="form-control @error('contribution_location') is-invalid @enderror" id="contribution_location" name="contribution_location" required>
+                <select class="form-control @error('contribution_location') is-invalid @enderror"
+                  id="contribution_location" name="contribution_location" required>
                   <option value="Medan" {{ old('contribution_location') == 'Medan' ? 'selected' : '' }}>Medan</option>
-                  <option value="Deli Serdang" {{ old('contribution_location') == 'Deli Serdang' ? 'selected' : '' }}>Deli Serdang</option>
+                  <option value="Deli Serdang" {{ old('contribution_location') == 'Deli Serdang' ? 'selected' : '' }}>
+                    Deli Serdang</option>
                 </select>
                 @error('contribution_location')
                   <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
-              <div class="mb-3">
-                <label for="contribution_field" class="form-label">Dibidang apa rencana kontribusimu?
-                  (Lingkungan/Pendidikan/Sosial/Literasi)</label>
-                <input type="text" class="form-control @error('contribution_field') is-invalid @enderror"
-                  id="contribution_field" name="contribution_field" placeholder="Contoh: Pendidikan"
-                  value="{{ old('contribution_field') }}" />
-                @error('contribution_field')
-                  <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-              </div>
+
               <div class="mb-3">
                 <label for="medical_history" class="form-label">Riwayat penyakit</label>
                 <textarea rows="3" class="form-control @error('medical_history') is-invalid @enderror" id="medical_history"
