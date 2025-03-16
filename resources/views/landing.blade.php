@@ -384,7 +384,7 @@
             <div class="button-area">
               <a href="{{ route('register') }}" class="rts-btn btn-secondary-5"><i
                   class="fa-light fa-paper-plane"></i>Daftar Sekarang</a>
-              <a href="https://wa.me/6282267103015" target="_blank" class="rts-btn btn-secondary-5-1">Tanya Admin</a>
+              <a href="https://wa.me/6282288904739" target="_blank" class="rts-btn btn-secondary-5-1">Tanya Admin</a>
             </div>
             <div class="shape-image">
               <img src="assets/images/cta/03.webp" alt="" class="one">
@@ -852,7 +852,7 @@
             <p class="disc">Ayo bergabung jadi bagian dari Generasi Cakrawala 8.</p>
             <div class="button-area">
               <a href="{{ route('register') }}" class="rts-btn btn-primary-5">Daftar Sekarang</a>
-              <a href="https://wa.me/6282267103015" target="_blank" class="rts-btn btn-primary-4-border">Tanya
+              <a href="https://wa.me/6282288904739" target="_blank" class="rts-btn btn-primary-4-border">Tanya
                 Admin</a>
             </div>
             <div class="shape-image">
