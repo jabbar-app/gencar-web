@@ -1,8 +1,7 @@
 <!doctype html>
 
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr"
-  data-theme="theme-default" data-assets-path="{{ asset('assets/') }}"
-  data-template="vertical-menu-template-no-customizer">
+<html lang="en" class="light-style layout-wide" dir="ltr" data-theme="theme-default"
+  data-assets-path="{{ asset('assets/') }}" data-template="vertical-menu-template-no-customizer">
 
 <head>
   <meta charset="utf-8" />
@@ -40,63 +39,31 @@
   <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}" />
   <link rel="stylesheet"
     href="{{ asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}" />
+  <link rel="stylesheet"
+    href="{{ asset('assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/vendor/libs/animate-css/animate.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/vendor/libs/flatpickr/flatpickr.css') }}" />
+  <!-- Row Group CSS -->
+  <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css') }}" />
+  <!-- Form Validation -->
+  <link rel="stylesheet" href="{{ asset('assets/vendor/libs/@form-validation/form-validation.css') }}" />
 
   <!-- Page CSS -->
+  @stack('styles')
 
   <!-- Helpers -->
   <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="{{ asset('assets/js/config.js') }}"></script>
-
-
-  <style>
-    .handle {
-      cursor: move;
-    }
-  </style>
-  @yield('css')
 </head>
 
 <body>
-  @guest
-    @yield('content')
-  @else
-    <div class="layout-wrapper layout-content-navbar">
-      <div class="layout-container">
+  <!-- Content -->
 
-        @include('template.dashboard.menu')
+  @yield('content')
 
-        <!-- Layout container -->
-        <div class="layout-page">
-          @include('template.dashboard.navbar')
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-
-            <!-- Content -->
-            @yield('content')
-            <!-- / Content -->
-
-            @include('template.dashboard.footer')
-
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
-        </div>
-        <!-- / Layout page -->
-      </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
-
-      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-      <div class="drag-target"></div>
-    </div>
-  @endguest
-  <!-- / Layout wrapper -->
+  <!-- / Content -->
 
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
@@ -114,19 +81,21 @@
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="{{ asset('assets/vendor/libs/moment/moment.js') }}"></script>
   <script src="{{ asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
-  <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
+  <!-- Flat Picker -->
+  <script src="{{ asset('assets/vendor/libs/moment/moment.js') }}"></script>
+  <script src="{{ asset('assets/vendor/libs/flatpickr/flatpickr.js') }}"></script>
+  <!-- Form Validation -->
+  <script src="{{ asset('assets/vendor/libs/@form-validation/popular.js') }}"></script>
+  <script src="{{ asset('assets/vendor/libs/@form-validation/bootstrap5.js') }}"></script>
+  <script src="{{ asset('assets/vendor/libs/@form-validation/auto-focus.js') }}"></script>
 
   <!-- Main JS -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
 
   <!-- Page JS -->
-  <script src="{{ asset('assets/js/app-academy-dashboard.js') }}"></script>
-  <script src="{{ asset('assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>
-  <script src="{{ asset('assets/js/extended-ui-sweetalert2.js') }}"></script>
-
-  @yield('js')
+  {{-- <script src="{{ asset('assets/js/tables-datatables-basic.js') }}"></script> --}}
+  @stack('scripts')
 </body>
 
 </html>
