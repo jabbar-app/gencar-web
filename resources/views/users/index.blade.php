@@ -6,7 +6,7 @@
       <div class="col-12 col-xl-12 col-sm-12 order-1 order-lg-2 mb-4 mb-lg-0">
         <div class="row mt-5 mb-4">
           <div class="col-md-6">
-            <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="Generasi Cakrawala" style="height: 64px;">
+            <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="Generasi Cakrawala" style="height: 64px;" class="mb-2">
           </div>
           <div class="col-md-6">
             <div class="card h-auto">
