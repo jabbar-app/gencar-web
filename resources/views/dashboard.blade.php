@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="container-xxl flex-grow-1 container-p-y">
+    @include('components.session-message')
     <div class="row">
       <div class="col-xl-4 mb-4 col-lg-5 col-12">
         <div class="card">
@@ -95,10 +96,90 @@
             </div>
           </div>
           <div class="card-body">
-            <h4>Pendaftaran Berhasil!</h4>
-            <p>
-              Selamat, proses pendaftaran kamu sudah berhasil. Silakan menunggu informasi selanjutnya, ya.
-            </p>
+            @if (empty($user->link_twibbon))
+              <h4>Pendaftaran Hampir Berhasil!</h4>
+              <p>
+                Silakan kirimkan link sosial media kamu yang sudah pakai Twibbon <a href="{{ route('users.edit', $user) }}"
+                  class="fw-bold text-primary">di sini</a> ya.
+              </p>
+            @else
+              <h4>Pendaftaran Berhasil!</h4>
+              <p>
+                Selamat, proses pendaftaran kamu sudah berhasil. Silakan menunggu informasi selanjutnya, ya.
+              </p>
+            @endif
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center my-2">
+              <h3 class="text-danger m-0">Detail Pendaftaran</h3>
+              <a href="{{ route('users.edit', $user) }}" class="btn btn-outline-danger">Edit Data</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row mb-3">
+              <div class="col-md-4 text-center">
+                @if ($user->photo)
+                  <img src="{{ asset($user->photo) }}" class="img-fluid rounded">
+                @else
+                  <img src="{{ asset('assets/img/default-avatar.png') }}" class="img-fluid rounded"
+                    style="max-height: 200px;" alt="Foto">
+                @endif
+              </div>
+              <div class="col-md-8">
+                <p><strong>Nama Peserta: </strong>{{ $user->name }}</p>
+                <p><strong>Email: </strong>{{ $user->email }}</p>
+                <p><strong>Telepon: </strong>{{ $user->phone }}</p>
+                <p><strong>Alamat: </strong>{{ $user->address }}</p>
+                <p><strong>Tempat, Tanggal Lahir: </strong>{{ $user->birth_place }},
+                  {{ \Carbon\Carbon::parse($user->birth_date)->translatedFormat('d F Y') }}</p>
+                <p><strong>Jenis Kelamin: </strong>{{ ucfirst($user->gender) }}</p>
+                <p><strong>Agama: </strong>{{ $user->religion }}</p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h4>Informasi Tambahan</h4>
+            <p><strong>Hobi/Minat:</strong> {{ $user->hobbies }}</p>
+            <p><strong>Kontak Darurat:</strong> {{ $user->emergency_contact }}</p>
+            <p><strong>Pekerjaan Saat Ini:</strong> {{ $user->current_activity }}</p>
+            <p><strong>Pendidikan Terakhir:</strong> {{ $user->last_education }} - {{ $user->major }}</p>
+            <p><strong>Sosial Media:</strong> {{ $user->social_media }}</p>
+
+            <hr>
+
+            <h4>Pengalaman & Motivasi</h4>
+            <p><strong>Pengalaman Organisasi #1:</strong><br>{{ $user->organization_experience_1 }}</p>
+            <p><strong>Pengalaman Organisasi #2:</strong><br>{{ $user->organization_experience_2 }}</p>
+            <p><strong>Prestasi:</strong><br>{{ $user->achievement_experience }}</p>
+            <p><strong>Tentang Generasi Cakrawala:</strong><br>{{ $user->about_generasi_cakrawala }}</p>
+            <p><strong>Motivasi Ikut:</strong><br>{{ $user->motivation }}</p>
+            <p><strong>Rencana Kontribusi:</strong><br>{{ $user->contribution_plan }}</p>
+            <p><strong>Lokasi Kontribusi:</strong> {{ $user->contribution_location }}</p>
+            <p><strong>Bidang Kontribusi:</strong> {{ $user->contribution_field }}</p>
+            <p><strong>Keahlian/Keterampilan:</strong> {{ $user->skill }}</p>
+
+            <hr>
+
+            <h4>Kesehatan</h4>
+            <p><strong>Riwayat Penyakit:</strong><br>{{ $user->medical_history }}</p>
+            <p><strong>Alergi Makanan:</strong><br>{{ $user->food_allergy }}</p>
+
+            <hr>
+
+            <h4>Lain-lain</h4>
+            <p><strong>Mengetahui Gencar Dari:</strong> {{ $user->source }}</p>
+            @if ($user->commitment_letter)
+              <p><strong>Surat Komitmen:</strong> <a href="{{ asset($user->commitment_letter) }}" target="_blank">Lihat
+                  File</a></p>
+            @endif
           </div>
         </div>
       </div>

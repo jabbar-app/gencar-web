@@ -14,7 +14,7 @@
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo_circle.png') }}" />
+  <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

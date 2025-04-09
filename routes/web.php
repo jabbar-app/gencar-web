@@ -12,10 +12,9 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/stats', [UserController::class, 'stats'])->name('stats');
-Route::get('/user/{user}', [UserController::class, 'show'])->name('users.show');
-Route::get('/user/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
-Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+Route::get('/stats', [UserController::class, 'index'])->name('stats');
+Route::get('/users/export', [UserController::class, 'export'])->name('users.export');
+Route::resource('users', UserController::class)->except(['create', 'store']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');

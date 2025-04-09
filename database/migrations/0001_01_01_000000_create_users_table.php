@@ -44,6 +44,7 @@ return new class extends Migration
             $table->text('food_allergy')->nullable(); // Alergi makan
             $table->string('source')->nullable(); // Darimana kamu tahu Gencar?
             $table->string('commitment_letter')->nullable(); // Upload surat komitmen diri
+            $table->string('link_twibbon')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

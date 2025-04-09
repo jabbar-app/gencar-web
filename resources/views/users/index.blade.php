@@ -9,7 +9,7 @@
           <h4 class="text-danger">
             Statistik Pendaftar
           </h4>
-          <a href="#" class="btn btn-md btn-danger mb-2 float-end">Export ke Excel</a>
+          <a href="{{ route('users.export') }}" class="btn btn-md btn-danger mb-2 float-end">Export ke Excel</a>
         </div>
         <div class="card">
           <div class="card-datatable table-responsive">
