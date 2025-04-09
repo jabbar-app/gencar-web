@@ -4,7 +4,34 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-xl-12 col-sm-12 order-1 order-lg-2 mb-4 mb-lg-0">
-        <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="Generasi Cakrawala" style="height: 64px;" class="mt-5 mb-3">
+        <div class="row mt-5 mb-4">
+          <div class="col-md-6">
+            <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="Generasi Cakrawala" style="height: 64px;">
+          </div>
+          <div class="col-md-6">
+            <div class="card h-auto">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="card-title mb-0">
+                  <h3 class="mb-1 me-2">{{ number_format($users->count()) }}</h3>
+                  <p class="mb-0">Total Pendaftar</p>
+                </div>
+                <div class="card-icon">
+                  <span class="badge bg-label-danger rounded p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-user-square-rounded">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" />
+                      <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+                      <path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="d-flex justify-content-between align-items-center my-3">
           <h4 class="text-danger">
             Statistik Pendaftar
