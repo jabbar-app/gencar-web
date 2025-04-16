@@ -19,7 +19,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::select(['id', 'name', 'phone', 'email', 'status'])->get();
+        $users = User::where('is_admin', false)->select(['id', 'name', 'phone', 'email', 'status'])->get();
         return view('users.index', compact('users'));
     }
 
