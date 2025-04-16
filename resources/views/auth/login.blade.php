@@ -27,8 +27,14 @@
             </a>
           </div>
           <!-- /Logo -->
-          <h3 class="mb-1">Selamat datang, Pejuang Kemerdekaan! 👋</h3>
-          <p class="mb-4">Silakan login dan menangkan Olimpiade Kemerdekaan Indonesia!</p>
+          <h3 class="mb-1">Selamat datang, Generasi Cakrawala! 👋</h3>
+          <p class="mb-4">Login untuk mengakses dashboard kamu.</p>
+
+          @if ($errors->any())
+            <div class="alert alert-danger">
+              {{ $errors->first() }}
+            </div>
+          @endif
 
           <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
             @csrf
@@ -40,7 +46,7 @@
             <div class="mb-3 form-password-toggle">
               <div class="d-flex justify-content-between">
                 <label class="form-label" for="password">Password</label>
-                <a href="{{ route('password.request') }}">
+                <a href="{{ route('password.request') }}" class="text-danger">
                   <small>Lupa Password?</small>
                 </a>
               </div>
@@ -57,7 +63,7 @@
                 <label class="form-check-label" for="remember-me"> Remember Me </label>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary d-grid w-100">Login</button>
+            <button type="submit" class="btn btn-danger d-grid w-100">Login</button>
           </form>
 
           {{-- <p class="text-center">

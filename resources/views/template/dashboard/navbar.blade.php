@@ -14,15 +14,15 @@
       <div class="nav-item navbar-search-wrapper mb-0">
         <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
           <i class="ti ti-search ti-md me-2"></i>
-          <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+          <span class="d-none d-md-inline-block text-muted">Cari artikel</span>
         </a>
       </div>
     </div>
     <!-- /Search -->
 
-    {{-- <ul class="navbar-nav flex-row align-items-center ms-auto">
+    <ul class="navbar-nav flex-row align-items-center ms-auto">
       <!-- Language -->
-      <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+      {{-- <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
         <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
           <i class="ti ti-language rounded-circle ti-md"></i>
         </a>
@@ -48,11 +48,11 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
       <!--/ Language -->
 
       <!-- Quick links  -->
-      <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+      {{-- <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
         <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown"
           data-bs-auto-close="outside" aria-expanded="false">
           <i class="ti ti-layout-grid-add ti-md"></i>
@@ -132,11 +132,11 @@
             </div>
           </div>
         </div>
-      </li>
+      </li> --}}
       <!-- Quick links -->
 
       <!-- Notification -->
-      <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+      {{-- <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
         <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown"
           data-bs-auto-close="outside" aria-expanded="false">
           <i class="ti ti-bell ti-md"></i>
@@ -344,14 +344,14 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> --}}
       <!--/ Notification -->
 
       <!-- User -->
       <li class="nav-item navbar-dropdown dropdown-user dropdown">
         <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
           <div class="avatar avatar-online">
-            <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+            <img src="{{ asset('assets/img/logo_circle.png') }}" alt class="h-auto rounded-circle" />
           </div>
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
@@ -360,12 +360,12 @@
               <div class="d-flex">
                 <div class="flex-shrink-0 me-3">
                   <div class="avatar avatar-online">
-                    <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    <img src="{{ asset('assets/img/logo_circle.png') }}" alt class="h-auto rounded-circle" />
                   </div>
                 </div>
                 <div class="flex-grow-1">
-                  <span class="fw-medium d-block">John Doe</span>
-                  <small class="text-muted">Admin</small>
+                  <span class="fw-medium d-block">{{ Auth::user()->name }}</span>
+                  <small class="text-muted">{{ Auth::user()->status }}</small>
                 </div>
               </div>
             </a>
@@ -376,10 +376,10 @@
           <li>
             <a class="dropdown-item" href="pages-profile-user.html">
               <i class="ti ti-user-check me-2 ti-sm"></i>
-              <span class="align-middle">My Profile</span>
+              <span class="align-middle">Cek Profil</span>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a class="dropdown-item" href="pages-account-settings-account.html">
               <i class="ti ti-settings me-2 ti-sm"></i>
               <span class="align-middle">Settings</span>
@@ -408,20 +408,25 @@
               <i class="ti ti-currency-dollar me-2 ti-sm"></i>
               <span class="align-middle">Pricing</span>
             </a>
-          </li>
+          </li> --}}
           <li>
             <div class="dropdown-divider"></div>
           </li>
           <li>
-            <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-              <i class="ti ti-logout me-2 ti-sm"></i>
-              <span class="align-middle">Log Out</span>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <i class="menu-icon tf-icons ti ti-power"></i>
+              <div data-i18n="Logout">Logout</div>
             </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
           </li>
         </ul>
       </li>
       <!--/ User -->
-    </ul> --}}
+    </ul>
   </div>
 
   <!-- Search Small Screens -->

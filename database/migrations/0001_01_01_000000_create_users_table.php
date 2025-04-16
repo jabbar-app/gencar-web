@@ -45,6 +45,8 @@ return new class extends Migration
             $table->string('source')->nullable(); // Darimana kamu tahu Gencar?
             $table->string('commitment_letter')->nullable(); // Upload surat komitmen diri
             $table->string('link_twibbon')->nullable();
+            $table->string('status')->nullable();
+            $table->string('result')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

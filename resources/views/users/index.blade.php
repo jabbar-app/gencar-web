@@ -2,11 +2,13 @@
 
 @section('content')
   <div class="container">
+
     <div class="row">
       <div class="col-12 col-xl-12 col-sm-12 order-1 order-lg-2 mb-4 mb-lg-0">
         <div class="row mt-5 mb-4">
           <div class="col-md-6">
-            <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="Generasi Cakrawala" style="height: 64px;" class="mb-2">
+            <img src="{{ asset('assets/img/logo_gencar.png') }}" alt="Generasi Cakrawala" style="height: 64px;"
+              class="mb-2">
           </div>
           <div class="col-md-6">
             <div class="card h-auto">
@@ -36,17 +38,19 @@
           <h4 class="text-danger">
             Statistik Pendaftar
           </h4>
-          <a href="{{ route('users.export') }}" class="btn btn-md btn-danger mb-2 float-end">Export ke Excel</a>
+          <a href="{{ route('users.export') }}" class="btn btn-md btn-outline-danger mb-2 float-end">Export ke Excel</a>
         </div>
         <div class="card">
+          @include('components.session-message')
           <div class="card-datatable table-responsive">
             <table id="usersTable" class="table">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Nama Calon Peserta</th>
-                  <th>HP</th>
-                  <th>Email</th>
+                  <th>Kontak</th>
+                  <th>Status</th>
+                  <th>Interviewer</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -54,14 +58,48 @@
                 @foreach ($users as $user)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->phone }}</td>
-                    <td>{{ $user->email }}</td>
+                    <td>
+                      <a href="{{ route('users.show', $user) }}" class="text-danger">
+                        {{ $user->name }}
+                      </a>
+                    </td>
+                    <td>
+                      <ul>
+                        <li>No. HP: {{ $user->phone }}</li>
+                        <li>Email: {{ $user->email }}</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <form action="{{ route('users.update-status', $user) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <select name="status" class="form-select" onchange="this.form.submit()">
+                          <option value="Seleksi Berkas" @if ($user->status == 'Seleksi Berkas') selected @endif>Seleksi Berkas
+                          </option>
+                          <option value="Seleksi Wawancara" @if ($user->status == 'Seleksi Wawancara') selected @endif>Seleksi
+                            Wawancara</option>
+                          <option value="Belum Diterima" @if ($user->status == 'Belum Diterima') selected @endif>Belum Diterima
+                          </option>
+                          <option value="Lulus" @if ($user->status == 'Lulus') selected @endif>Lulus</option>
+                        </select>
+                      </form>
+                    </td>
+                    <td>
+                      @if ($user->status == 'Seleksi Wawancara')
+                        @if ($user->selection && $user->selection->pj_name)
+                          <a href="{{ route('selections.edit', $user) }}" class="btn btn-outline-info">{{ $user->selection->pj_name }}</a>
+                        @else
+                          <a href="{{ route('selections.create', $user) }}" class="btn btn-danger">Tambah</a>
+                        @endif
+                      @else
+                        <small>Peserta tidak sedang di tahap wawancara.</small>
+                      @endif
+                    </td>
                     <td>
                       <div class="dropdown">
-                        <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-bs-toggle="dropdown"
+                        <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-bs-toggle="dropdown"
                           aria-expanded="false">
-                          <i class="ti ti-dots-vertical"></i>
+                          <i class="ti ti-dots"></i>
                         </button>
                         <div class="dropdown-menu">
                           <a href="{{ route('users.show', $user) }}" class="dropdown-item waves-effect">

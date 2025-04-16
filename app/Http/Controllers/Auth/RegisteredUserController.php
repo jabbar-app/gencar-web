@@ -19,7 +19,8 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $registration_status = false;
+        return view('auth.register', compact('registration_status'));
     }
 
     /**

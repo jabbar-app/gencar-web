@@ -19,7 +19,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::select(['id', 'name', 'phone', 'email'])->get();
+        $users = User::select(['id', 'name', 'phone', 'email', 'status'])->get();
         return view('users.index', compact('users'));
     }
 
@@ -138,5 +138,21 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->route('users.index')->with('success', 'User berhasil dihapus.');
+    }
+
+    public function updateStatus(Request $request, User $user)
+    {
+        // Validasi input status dengan memastikan nilainya salah satu dari pilihan yang tersedia
+        $request->validate([
+            'status' => 'required|in:Seleksi Berkas,Seleksi Wawancara,Belum Diterima,Lulus',
+        ]);
+
+        // Update status user dan simpan perubahan ke database
+        $user->update([
+            'status' => $request->status,
+        ]);
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->back()->with('success', 'Status berhasil diperbarui.');
     }
 }
