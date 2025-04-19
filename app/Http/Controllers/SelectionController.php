@@ -18,7 +18,7 @@ class SelectionController extends Controller
         $validated = $request->validate([
             'user_id' => '',
             'pj_name' => 'nullable|string|max:255',
-            'pj_contact' => 'nullable|string|max:20',
+            'pj_contact' => 'nullable|string',
             'dateline' => 'nullable|date'
         ]);
         $validated['user_id'] = $user->id;
