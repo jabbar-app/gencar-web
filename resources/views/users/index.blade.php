@@ -87,7 +87,8 @@
                     <td>
                       @if ($user->status == 'Seleksi Wawancara')
                         @if ($user->selection && $user->selection->pj_name)
-                          <a href="{{ route('selections.edit', $user) }}" class="btn btn-outline-info">{{ $user->selection->pj_name }}</a>
+                          <a href="{{ route('selections.edit', $user) }}"
+                            class="btn btn-outline-info">{{ $user->selection->pj_name }}</a>
                         @else
                           <a href="{{ route('selections.create', $user) }}" class="btn btn-danger">Tambah</a>
                         @endif
@@ -133,7 +134,19 @@
 @push('scripts')
   <script>
     $(document).ready(function() {
-      $('#usersTable').DataTable();
+      // Ambil nomor halaman terakhir yang tersimpan
+      const lastPage = localStorage.getItem('users_table_last_page') || 0;
+
+      const table = $('#usersTable').DataTable({
+        // Konfigurasi lainnya
+        displayStart: lastPage * 10 // asumsikan 10 rows per page
+      });
+
+      // Setiap kali user pindah halaman, simpan ke localStorage
+      table.on('page.dt', function() {
+        const info = table.page.info();
+        localStorage.setItem('users_table_last_page', info.page);
+      });
     });
   </script>
 @endpush
