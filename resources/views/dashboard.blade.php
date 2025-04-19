@@ -10,16 +10,6 @@
     } else {
         $stage = 1;
     }
-
-    // Set timezone ke Asia/Jakarta
-    date_default_timezone_set('Asia/Jakarta');
-
-    // Ambil jam dan menit saat ini
-    $currentHour = (int) date('H');
-    $currentMinute = (int) date('i');
-
-    // Cek apakah sekarang pukul 21:00 tepat
-    $time_is_now = $currentHour === 21 && $currentMinute === 0;
   @endphp
   <div class="container-xxl flex-grow-1 container-p-y">
     @include('components.session-message')
@@ -115,7 +105,7 @@
             </div>
           </div>
           <div class="card-body">
-            @if ($user->selection && $time_is_now)
+            @if ($user->selection)
               <h4>Selamat! Kamu Lolos ke Tahap Wawancara 🎉🥳</h4>
               <p>
                 Silakan cek detail Pewawancara kamu berikut:
