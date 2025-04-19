@@ -12,7 +12,7 @@ use App\Http\Controllers\ResultExportController;
 
 Route::get('/', function () {
     return view('landing');
-});
+})->name('home');
 
 Route::get('/users/export', [UserController::class, 'export'])->name('users.export');
 Route::put('/users/update-status/{user}', [UserController::class, 'updateStatus'])->name('users.update-status');
