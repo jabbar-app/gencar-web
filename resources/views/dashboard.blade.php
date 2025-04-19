@@ -18,8 +18,8 @@
     $currentHour = (int) date('H');
     $currentMinute = (int) date('i');
 
-    // Cek apakah sekarang pukul 19:00 tepat
-    $time_is_now = $currentHour === 19 && $currentMinute === 0;
+    // Cek apakah sekarang pukul 21:00 tepat
+    $time_is_now = $currentHour === 21 && $currentMinute === 0;
   @endphp
   <div class="container-xxl flex-grow-1 container-p-y">
     @include('components.session-message')
