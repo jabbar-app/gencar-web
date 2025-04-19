@@ -3,13 +3,23 @@
 @section('content')
   @php
     $status = Auth::user()->status;
-    if ($status == 'Seleksi Berkas') {
-        $stage = 1;
-    } elseif ($status == 'Seleksi Wawancara') {
+    if ($status == 'Seleksi Wawancara') {
         $stage = 2;
     } elseif ($status == 'Lulus') {
         $stage = 3;
+    } else {
+        $stage = 1;
     }
+
+    // Set timezone ke Asia/Jakarta
+    date_default_timezone_set('Asia/Jakarta');
+
+    // Ambil jam dan menit saat ini
+    $currentHour = (int) date('H');
+    $currentMinute = (int) date('i');
+
+    // Cek apakah sekarang pukul 19:00 tepat
+    $time_is_now = $currentHour === 19 && $currentMinute === 0;
   @endphp
   <div class="container-xxl flex-grow-1 container-p-y">
     @include('components.session-message')
@@ -105,7 +115,7 @@
             </div>
           </div>
           <div class="card-body">
-            @if ($user->selection)
+            @if ($user->selection && $time_is_now)
               <h4>Selamat! Kamu Lolos ke Tahap Wawancara 🎉🥳</h4>
               <p>
                 Silakan cek detail Pewawancara kamu berikut:
@@ -113,7 +123,8 @@
                 <li>Nama: <strong>{{ $user->selection->pj_name }}</strong></li>
                 <li>Kontak: <strong>{{ $user->selection->pj_contact }}</strong></li>
                 <li>Batas Waktu Konfirmasi:
-                  <strong>{{ \Carbon\Carbon::parse($user->selection->dateline)->translatedFormat('d F Y') }}</strong></li>
+                  <strong>{{ \Carbon\Carbon::parse($user->selection->dateline)->translatedFormat('d F Y') }}</strong>
+                </li>
               </ul>
               Silakan hubungi Pewawancara untuk melakukan konfirmasi sebelum batas waktu yang telah ditentukan. Apabila
               kamu tidak melakukan konfirmasi, maka kamu akan dinyatakan gugur/didiskualifikasi.

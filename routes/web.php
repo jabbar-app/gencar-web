@@ -14,11 +14,6 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/{user}/selection', [SelectionController::class, 'create'])->name('selections.create');
-Route::post('/{user}/selection', [SelectionController::class, 'store'])->name('selections.store');
-Route::get('/edit/{user}/selection', [SelectionController::class, 'edit'])->name('selections.edit');
-Route::put('/update/{user}/selection', [SelectionController::class, 'update'])->name('selections.update');
-
 Route::get('/users/export', [UserController::class, 'export'])->name('users.export');
 Route::put('/users/update-status/{user}', [UserController::class, 'updateStatus'])->name('users.update-status');
 Route::resource('users', UserController::class)->except(['create', 'store']);
@@ -26,6 +21,10 @@ Route::resource('users', UserController::class)->except(['create', 'store']);
 
 Route::middleware('auth', AdminMiddleware::class)->group(function () {
     Route::get('/stats', [UserController::class, 'index'])->name('stats');
+    Route::get('/{user}/selection', [SelectionController::class, 'create'])->name('selections.create');
+    Route::post('/{user}/selection', [SelectionController::class, 'store'])->name('selections.store');
+    Route::get('/edit/{user}/selection', [SelectionController::class, 'edit'])->name('selections.edit');
+    Route::put('/update/{user}/selection', [SelectionController::class, 'update'])->name('selections.update');
 });
 
 Route::middleware('auth')->group(function () {

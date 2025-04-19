@@ -30,13 +30,13 @@ class SelectionController extends Controller
 
     public function edit(User $user)
     {
-        $selection = Selection::find($user->id);
+        $selection = Selection::where('user_id', $user->id)->first();
         return view('selection.edit', compact('user', 'selection'));
     }
 
     public function update(User $user, Request $request)
     {
-        $selection = Selection::find($user->id);
+        $selection = Selection::where('user_id', $user->id)->first();
 
         $selection->update([
             'pj_name' => $request->pj_name,
