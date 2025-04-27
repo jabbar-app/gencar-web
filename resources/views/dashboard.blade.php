@@ -5,7 +5,7 @@
     $status = Auth::user()->status;
     if ($status == 'Seleksi Wawancara') {
         $stage = 2;
-    } elseif ($status == 'Lulus') {
+    } elseif ($status == 'Lulus' || $status == 'Waiting List') {
         $stage = 3;
     } else {
         $stage = 1;
@@ -100,7 +100,6 @@
 
     <div class="row">
       <div class="col-12">
-
         <div class="card">
           <div class="card-header">
             <div class="d-flex justify-content-between">
@@ -113,8 +112,8 @@
               @if (empty($user->link_twibbon))
                 <h4>Pendaftaran Hampir Berhasil!</h4>
                 <p>
-                  Silakan kirimkan link sosial media kamu yang sudah pakai Twibbon <a
-                    href="{{ route('users.edit', $user) }}" class="fw-bold text-primary">di sini</a> ya.
+                  Silakan kirimkan link sosial media kamu yang sudah menggunakan Twibbon
+                  <a href="{{ route('users.edit', $user) }}" class="fw-bold text-primary">di sini</a> ya.
                 </p>
               @else
                 <h4>Pendaftaran Berhasil!</h4>
@@ -123,29 +122,50 @@
                 </p>
               @endif
             @elseif ($user->status == 'Seleksi Wawancara' && $user->selection)
-              <h4>Selamat! Kamu Lolos ke Tahap Wawancara 🎉🥳</h4>
+              <h4>Selamat! Kamu Lulus Seleksi Wawancara 🎉</h4>
               <p>
-                Silakan cek detail Pewawancara kamu berikut:
+                Kamu dinyatakan <strong>LULUS</strong> seleksi wawancara Generasi Cakrawala (GENCAR) 8.0 Forum Indonesia
+                Muda (FIM) Regional Medan dan Deli Serdang. <br><br>
+
+                Kamu berhak mengikuti Pelatihan GENCAR 8.0 yang akan dilaksanakan secara luring pada:
+              </p>
               <ul>
-                <li>Nama: <strong>{{ $user->selection->pj_name }}</strong></li>
-                <li>Kontak: <strong>{{ $user->selection->pj_contact }}</strong></li>
-                <li>Batas Waktu Konfirmasi:
-                  <strong>{{ \Carbon\Carbon::parse($user->selection->dateline)->translatedFormat('d F Y') }}</strong>
-                </li>
+                <li><strong>Sabtu–Senin, 10–12 Mei 2025</strong></li>
               </ul>
-              Silakan hubungi Pewawancara untuk melakukan konfirmasi sebelum batas waktu yang telah ditentukan. Apabila
-              kamu tidak melakukan konfirmasi, maka kamu akan dinyatakan gugur/didiskualifikasi.
+              <p>
+                Pelatihan ini wajib diikuti agar dapat resmi bergabung menjadi bagian dari Generasi Cakrawala FIM.
+                <br><br>
+
+                Biaya kontribusi: <strong>Rp100.000</strong><br>
+                Meliputi: Penginapan, konsumsi, training kit, dan pengalaman tak terlupakan. <br><br>
+
+                Transfer ke: <strong>BRI 335301012866505 a.n Habibah Salsabila Addary</strong><br>
+                Batas pembayaran: <strong>28 April – 3 Mei 2025 pukul 23.59 WIB</strong>.<br><br>
+
+                Setelah membayar, segera konfirmasi ke Hotline Generasi Cakrawala (<strong>0851-8071-7644</strong>). Jika
+                tidak melakukan konfirmasi hingga batas waktu, maka dianggap mengundurkan diri.<br><br>
+
+                Kami tidak sabar bertemu kamu di Pelatihan GENCAR 8.0! 🚀
               </p>
             @elseif ($user->status == 'Belum Diterima')
               <div class="alert alert-light mb-0 alert-dismissible" role="alert">
-                <h5 class="alert-heading mb-2">Terima kasih telah mendaftar 🙏</h5>
+                <h5 class="alert-heading mb-2">Terima kasih atas partisipasimu 🙏</h5>
                 <p class="mb-0">
-                  Kami sangat menghargai semangat dan partisipasi kamu dalam proses seleksi <strong>Generasi Cakrawala
-                    Angkatan ke-8</strong>.
-                  Meskipun kamu belum berhasil lolos tahun ini, jangan menyerah—masih banyak peluang hebat menantimu!
+                  Dengan berat hati, kami sampaikan bahwa kamu <strong>TIDAK LULUS</strong> dalam tahap wawancara.<br><br>
+                  Kami sangat menghargai semangat dan komitmenmu. Ini bukan akhir perjalananmu, melainkan awal untuk terus
+                  tumbuh dan berkembang.<br><br>
+                  Teruslah berkarya, belajar, dan memberikan dampak positif. Sampai jumpa di kesempatan lainnya! 🌱
                 </p>
-                <p class="mb-0 mt-2">
-                  Kami doakan yang terbaik untuk perjalananmu ke depan 🌱
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            @elseif ($user->status == 'Waiting List')
+              <div class="alert alert-light mb-0 alert-dismissible" role="alert">
+                <h5 class="alert-heading mb-2">Kamu Berada di Waiting List!</h5>
+                <p class="mb-0">
+                  Kamu masuk dalam daftar <strong>WAITING LIST</strong> peserta Pelatihan GENCAR 8.0.<br><br>
+                  Artinya, kamu berpotensi mengikuti pelatihan jika ada peserta yang mengundurkan diri atau tidak memenuhi
+                  kewajiban administrasi.<br><br>
+                  Kami akan segera menghubungimu apabila ada kuota yang tersedia. Tetap semangat dan selalu siap, ya! ✨
                 </p>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>

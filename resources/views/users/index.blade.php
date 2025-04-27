@@ -80,6 +80,7 @@
                             Wawancara</option>
                           <option value="Belum Diterima" @if ($user->status == 'Belum Diterima') selected @endif>Belum Diterima
                           </option>
+                          <option value="Waiting List" @if ($user->status == 'Waiting List') selected @endif>Waiting List</option>
                           <option value="Lulus" @if ($user->status == 'Lulus') selected @endif>Lulus</option>
                         </select>
                       </form>
