@@ -123,7 +123,7 @@
                   Selamat, proses pendaftaran kamu sudah berhasil. Silakan menunggu informasi selanjutnya, ya.
                 </p>
               @endif
-            @elseif ($user->status == 'Seleksi Wawancara' && $user->selection)
+            @elseif ($user->status == 'Lulus')
               <h4>Selamat! Kamu Lulus Seleksi Wawancara 🎉</h4>
               <p>
                 Kamu dinyatakan <strong>LULUS</strong> seleksi wawancara Generasi Cakrawala (GENCAR) 8.0 Forum Indonesia
@@ -152,6 +152,12 @@
             @elseif ($user->status == 'Belum Diterima')
               <div class="alert alert-light mb-0 alert-dismissible" role="alert">
                 <h5 class="alert-heading mb-2">Terima kasih atas partisipasimu 🙏</h5>
+                <p>Halo, Sobat Cakrawala!</p>
+                <p>
+                  Terima kasih banyak atas partisipasi dan antusiasme kamu dalam mengikuti proses seleksi Open
+                  Recruitment Generasi Cakrawala (GENCAR) 8.0 Forum Indonesia Muda Regional Medan dan Deli
+                  Serdang.
+                </p>
                 <p class="mb-0">
                   Dengan berat hati, kami sampaikan bahwa kamu <strong>TIDAK LULUS</strong> dalam tahap wawancara.<br><br>
                   Kami sangat menghargai semangat dan komitmenmu. Ini bukan akhir perjalananmu, melainkan awal untuk terus
@@ -163,6 +169,12 @@
             @elseif ($user->status == 'Waiting List')
               <div class="alert alert-light mb-0 alert-dismissible" role="alert">
                 <h5 class="alert-heading mb-2">Kamu Berada di Waiting List!</h5>
+                <p>Halo, Sobat Cakrawala!</p>
+                <p>
+                  Terima kasih banyak atas partisipasi dan antusiasme kamu dalam mengikuti proses seleksi Open
+                  Recruitment Generasi Cakrawala (GENCAR) 8.0 Forum Indonesia Muda Regional Medan dan Deli
+                  Serdang.
+                </p>
                 <p class="mb-0">
                   Kamu masuk dalam daftar <strong>WAITING LIST</strong> peserta Pelatihan GENCAR 8.0.<br><br>
                   Artinya, kamu berpotensi mengikuti pelatihan jika ada peserta yang mengundurkan diri atau tidak memenuhi
