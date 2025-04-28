@@ -142,12 +142,6 @@ class UserController extends Controller
 
     public function updateStatus(Request $request, User $user)
     {
-        // Validasi input status dengan memastikan nilainya salah satu dari pilihan yang tersedia
-        $request->validate([
-            'status' => 'required|in:Seleksi Berkas,Seleksi Wawancara,Belum Diterima,Lulus',
-        ]);
-
-        // Update status user dan simpan perubahan ke database
         $user->update([
             'status' => $request->status,
         ]);
