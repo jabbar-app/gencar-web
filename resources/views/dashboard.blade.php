@@ -105,7 +105,7 @@
         <div class="card">
           <div class="card-header">
             <div class="d-flex justify-content-between">
-              <h5 class="card-title mb-0">Papan Pengumuman</h5>
+              <h5 class="card-title mb-0">Hi, {{ Auth::user()->name }}!</h5>
               <small class="text-muted"><em>Generasi Cakrawala 8</em></small>
             </div>
           </div>
